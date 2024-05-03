@@ -28,3 +28,7 @@ section {
 #receipt {
     padding-top: 10%;
 }
+
+button[type="radio"] {
+    accent-color: black;
+}
