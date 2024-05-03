@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 20% 2% 20%;
+}
+
+#scoopsDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+form,
+section {
+    border: solid black 1px;
+}
+
+#receipt {
+    padding-top: 10%;
+}
