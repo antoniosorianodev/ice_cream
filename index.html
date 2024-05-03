@@ -10,7 +10,35 @@
 </head>
 
 <body>
+    <form>
+        <label>Number of Scoops:</label>
+        <input type="number" name="scoopsNumber" required>
+        <!-- Having "required" on both options of the radio buttons is not necessary, it is however clearer imo -->
+        <input type="radio" name="holder" required>
+        <label>Cone</label>
+        <input type="radio" name="holder" required>
+        <label>Cup</label>
+        <label>Toppings:</label>
+        <section>
+            <div>
+                <label>Sprinkles ($0.05):</label>
+                <input type="checkbox" name="sprinkles">
+                <label>Whipped Cream ($0.25):</label>
+                <input type="checkbox" name="whippedCream">
+            </div>
+            <div>
+                <label>Hot Fudge ($1.25):</label>
+                <input type="checkbox" name="hotFudge">
+                <label>Cherry ($0.25):</label>
+                <input type="checkbox" name="cherry">
+            </div>
+        </section>
+        <button>Submit Order</button>
+        <div>Base Tax:</div>
+        <div>Tax:</div>
+        <div>Total Due:</div>
 
+    </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
