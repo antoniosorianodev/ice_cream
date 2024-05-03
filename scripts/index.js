@@ -1,16 +1,18 @@
-// ONLY CUPS CAN HAVE TOPPINGS, FIX THIS LATER
-// ONLY CUPS CAN HAVE TOPPINGS, FIX THIS LATER
-// ONLY CUPS CAN HAVE TOPPINGS, FIX THIS LATER
-// ONLY CUPS CAN HAVE TOPPINGS, FIX THIS LATER
-// ONLY CUPS CAN HAVE TOPPINGS, FIX THIS LATER
-// ONLY CUPS CAN HAVE TOPPINGS, FIX THIS LATER
-// ONLY CUPS CAN HAVE TOPPINGS, FIX THIS LATER
-
 "use strict"
 
-
 window.onload = function () {
+    let coneRadio = document.querySelector("#coneRadio");
+    let cupRadio = document.querySelector("#cupRadio");
+
+    document.querySelector("#toppingsLabel").style.display = "none";
+    document.querySelector("#toppingsSection").style.display = "none";
+
     iceCreamForm.addEventListener("submit", costCalculator);
+
+    // My very soul wants to believe the bottom two lines can be done in one
+    // I however am not good/knowledgeable enough to know if this is true
+    coneRadio.addEventListener("click", hideAndSeek);
+    cupRadio.addEventListener("click", hideAndSeek);
 }
 
 function costCalculator(event) {
@@ -39,7 +41,8 @@ function costCalculator(event) {
         toppingsCost += 0.25;
     }
     baseCost += toppingsCost;
-    let taxAmount = baseCost * 0.0825;
+    // changed tax rate to 7% instead of 8.25%
+    let taxAmount = baseCost * 0.07;
     let totalCost = baseCost + taxAmount;
 
     document.querySelector("#baseDiv").innerHTML = `Base price: $${baseCost.toFixed(2)}`;
@@ -52,8 +55,12 @@ function costCalculator(event) {
     `)
 }
 
-// if (theForm.holder.value === "yes") {
-//     document.querySelector("#toppingsSection").style.display = "none";
-// } else {
-//     document.querySelector("#toppingsSection").style.display = "block";
-// }
+function hideAndSeek() {
+    if (document.querySelector("#cupRadio").checked) {
+        document.querySelector("#toppingsLabel").style.display = "block";
+        document.querySelector("#toppingsSection").style.display = "block";
+    } else {
+        document.querySelector("#toppingsLabel").style.display = "none";
+        document.querySelector("#toppingsSection").style.display = "none";
+    }
+}

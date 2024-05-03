@@ -18,14 +18,14 @@
         </div>
         <div>
             <!-- Having "required" on BOTH radio buttons is not necessary, it is however clearer imo -->
-            <input type="radio" name="holder" required>
-            <label>Cone</label>
+            <input id="coneRadio" type="radio" name="holder" checked required>
+            <label for="coneRadio">Cone</label>
 
-            <input type="radio" name="holder" required>
-            <label>Cup</label>
+            <input id="cupRadio" type="radio" name="holder" required>
+            <label for="cupRadio">Cup</label>
 
         </div>
-        <label>Toppings:</label>
+        <label id="toppingsLabel">Toppings:</label>
         <section id="toppingsSection">
             <div>
                 <input type="checkbox" name="sprinkles">
