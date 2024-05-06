@@ -30,7 +30,7 @@ function costCalculator(event) {
     let toppingsCost = 0;
     if (document.querySelector("#cupRadio").checked) {
         if (iceCreamForm.sprinkles.checked) {
-            toppingsCost += 0.05;
+            toppingsCost += 0.50;
         }
         if (iceCreamForm.whippedCream.checked) {
             toppingsCost += 0.25;
