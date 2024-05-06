@@ -28,17 +28,19 @@ function costCalculator(event) {
     baseCost += scoopCost
 
     let toppingsCost = 0;
-    if (iceCreamForm.sprinkles.checked) {
-        toppingsCost += 0.05;
-    }
-    if (iceCreamForm.whippedCream.checked) {
-        toppingsCost += 0.25;
-    }
-    if (iceCreamForm.hotFudge.checked) {
-        toppingsCost += 1.25;
-    }
-    if (iceCreamForm.cherry.checked) {
-        toppingsCost += 0.25;
+    if (document.querySelector("#cupRadio").checked) {
+        if (iceCreamForm.sprinkles.checked) {
+            toppingsCost += 0.05;
+        }
+        if (iceCreamForm.whippedCream.checked) {
+            toppingsCost += 0.25;
+        }
+        if (iceCreamForm.hotFudge.checked) {
+            toppingsCost += 1.25;
+        }
+        if (iceCreamForm.cherry.checked) {
+            toppingsCost += 0.25;
+        }
     }
     baseCost += toppingsCost;
     // changed tax rate to 7% instead of 8.25%
